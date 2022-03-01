@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+:root{
+    --main-color:#8e44ad;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background: var(--main-color);
+}
+.container h1 {
+    color: var(--main-color);
+    background: #fff;
+    font-size: 5em;
+    padding: .5em .8em;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+.color-switcher {
+    position: fixed;
+    top: 25px;
+    right: -200px;
+    background: #fff;
+    padding: 10px;
+    z-index: 100;
+    width: 200px;
+}
+.color-switcher.active{
+    right: 0;
+}
+.color-switcher h3 {
+    color: var(--main-color);
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.switcher-btn {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    background: #fff;
+    color: var(--main-color);
+    font-size: 35px;
+    padding: 10px 21px;
+    cursor: pointer;
+}
+.switcher-btn i{
+    animation: rotota 2s linear infinite;
+}
+@keyframes rotota{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.color-switcher .theme-button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.color-switcher .theme-button-container .theme-button{
+    display: block;
+    width: 50px;height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
